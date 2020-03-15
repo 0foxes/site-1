@@ -11,7 +11,7 @@ html, body {
 
 /* Background image */
 .bgimg {
-  background-image: url('C:\\Users\\a\\Desktop\\Website\\assets\\images\\ship.png');
+  background-image: url('https://.com/assets/images/ship.png');
   height: 100%;
   background-position: center;
   background-size: cover;
@@ -26,6 +26,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 20px;
+  font-size: 20px;
   font-family: "Courier"!important;
 }
 
@@ -34,6 +35,7 @@ html, body {
   position: absolute;
   bottom: 0;
   left: 20px;
+  font-size: 20px;
   font-family: "Courier"!important;
 }
 
