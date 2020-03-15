@@ -1,0 +1,47 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+  height: 100%
+}
+
+/* Remove thin white border on page */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background image */
+.bgimg {
+  background-image: url('C:\\Users\\a\\Desktop\\Website\\assets\\images\\ship.png');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 30px;
+}
+
+/* Position text in the top-left corner */
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-family: "Courier"!important;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  font-family: "Courier"!important;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
