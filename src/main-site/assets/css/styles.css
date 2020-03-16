@@ -4,16 +4,16 @@ body, html {
 }
 /* Remove thin white border on page */
 html, body {
-  margin: 0;
-  padding: 0;
+  margin: 0!important;
+  padding: 0!important;
 }
 /* Background image */
 .bgimg {
   background-image: url('/assets/images/ship.png');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  height: 100%!important;
+  background-position: center!important;
+  background-size: cover!important;
+  background-repeat: no-repeat!important;
   color: white;
 }
 /* Normal text */
@@ -41,5 +41,5 @@ html, body {
 }
 /* Navbar bottom border */
 .navbar {
-  border-bottom: solid #eeeeee 2px
+  border-bottom: solid #eeeeee 2px;
 }
