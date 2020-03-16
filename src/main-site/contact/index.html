@@ -43,13 +43,13 @@
 
                 <form method="POST" action="sendmail.php">
                     <div><label>Your Name:</label></div>
-                    <div><input type="text" name="myName" class="form-control" /></div>
+                    <div><input type="text" name="myName" class="form-control" required/></div>
                     <div><label>Your Email:</label></div>
-                    <div><input type="text" name="myEmail" class="form-control" /></div>
+                    <div><input type="text" name="myEmail" class="form-control" required/></div>
                     <div><label>Subject:</label></div>
-                    <div><input type="text" name="mySubject" class="form-control" /></div>
+                    <div><input type="text" name="mySubject" class="form-control" required/></div>
                     <div><label>Message:</label></div>
-                    <div><textarea cols="40" rows="6" name="myMessage" class="form-control"></textarea></div>
+                    <div><textarea cols="40" rows="6" name="myMessage" class="form-control" required></textarea></div>
                     <br>
                     <div class="float-right mt-2">
                         <input type="submit" value="Send" class="btn btn-primary"/>
