@@ -1,0 +1,44 @@
+/* Set height to 100% for body and html to enable the background image to cover the whole page: */
+body, html {
+  height: 100%
+}
+
+/* Remove thin white border on page */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Background image */
+.bgimg {
+  background-image: url('/assets/images/ship.png');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+}
+
+/* Position text in the top-left corner */
+.nav-item {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Normal text */
+.text {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+.page-header{
+  font-size: 40px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+/* Home button */
+.navbar-brand {
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace
+}
