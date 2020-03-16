@@ -43,3 +43,8 @@ html, body {
 .navbar {
   border-bottom: solid #eeeeee 2px;
 }
+/* Contact me button */
+.btn {
+  color: #ededed!important;
+  background-color: #009dff!important;
+}
