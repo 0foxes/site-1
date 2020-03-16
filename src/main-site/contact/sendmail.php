@@ -41,6 +41,29 @@
 <?php
   echo "Message sent on " . date("d/m/Y");
 
+  function getUserIP(){
+    $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
+    $forwardIp = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+    $remoteIp  = $_SERVER['REMOTE_ADDR'];
+
+    if(filter_var($clientIp, FILTER_VALIDATE_IP))
+    {
+        $ip = $clientIp;
+    }
+    elseif(filter_var($forwardIp, FILTER_VALIDATE_IP))
+    {
+        $ip = $forwardIp;
+    }
+    else
+    {
+        $ip = $remoteIp;
+    }
+
+    return $ip;
+}
+
+
+  $userIp = getUserIP();
 	$userName 		= $_POST['myName'];
 	$userEmail	 	= $_POST['myEmail'];
 	$userMessage 		= $_POST['myMessage'];
@@ -50,10 +73,11 @@
   $headers = 'From:' . $sender;
 
   $subject    = $_POST['mySubject'];
-	$body 			= "Message Sent:  ";
-	$body .= "\r\n User Name: " . $userName;
-	$body .= "\r\n User Email: " . $userEmail;
-	$body .= "\r\n User Message: " . $userMessage;
+	$body 			= "Message:";
+  $body .= "\r\nUser IP: " . $userIp;
+	$body .= "\r\nUser Name: " . $userName;
+	$body .= "\r\nUser Email: " . $userEmail;
+	$body .= "\r\nUser Message: " . $userMessage;
 
 	mail($to, $subject, $body, $headers);
 ?>
