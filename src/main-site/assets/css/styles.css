@@ -2,13 +2,11 @@
 body, html {
   height: 100%
 }
-
 /* Remove thin white border on page */
 html, body {
   margin: 0;
   padding: 0;
 }
-
 /* Background image */
 .bgimg {
   background-image: url('/assets/images/ship.png');
@@ -18,27 +16,26 @@ html, body {
   position: relative;
   color: white;
 }
-
-/* Position text in the top-left corner */
-.nav-item {
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-
 /* Normal text */
 .text {
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
 }
-
 /* Header */
 .page-header{
   font-size: 40px;
   font-family: 'Roboto Mono', monospace;
 }
-
 /* Home button */
 .navbar-brand {
   font-size: 25px;
   font-family: 'Roboto Mono', monospace
+}
+/* Navbar when you hover over something */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color:#add8e6!important;
+}
+/* Navbar current page*/
+.navbar-dark .navbar-nav .nav-link.active {
+    color:#ededed!important;
 }
