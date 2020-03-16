@@ -39,3 +39,7 @@ html, body {
 .navbar-dark .navbar-nav .nav-link.active {
     color:#ededed!important;
 }
+/* Navbar bottom border */
+.navbar {
+  border-bottom: solid #eeeeee 2px
+}
