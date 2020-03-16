@@ -1,6 +1,6 @@
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body, html {
-  height: 100%
+  height: 100vh!important;
 }
 /* Remove thin white border on page */
 html, body {
@@ -10,7 +10,7 @@ html, body {
 /* Background image */
 .bgimg {
   background-image: url('/assets/images/ship.png');
-  height: 100%!important;
+  height: 100vh!important;
   background-position: center!important;
   background-size: cover!important;
   background-repeat: no-repeat!important;
@@ -23,12 +23,12 @@ html, body {
 }
 /* Header */
 .page-header{
-  font-size: 40px;
+  font-size: 36px;
   font-family: 'Roboto Mono', monospace;
 }
 /* Home button */
 .navbar-brand {
-  font-size: 25px;
+  font-size: 24px;
   font-family: 'Roboto Mono', monospace
 }
 /* Navbar when you hover over something */
