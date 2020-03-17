@@ -102,7 +102,7 @@ function SHA256(s){
 var countDownDate = Date.now();
 var hash = SHA256(toString(countDownDate))
 
-// Refresh every 250ms
+// Refresh every 100ms
 var x = setInterval(function() {
 
   // Hash the hash and display it
