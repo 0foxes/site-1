@@ -125,15 +125,15 @@ function SHA256(s) {
     return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
 }
 
-// Get epoch time and hash it
-var countDownDate = Date.now();
-var hash = SHA256(toString(countDownDate))
 
 // Refresh every 100ms
-var x = setInterval(function() {
 
-    // Hash the hash and display it
-    hash = SHA256(hash)
+var x = setInterval(function() {
+    var now = new Date().getTime();
+    var now = toString(now);
+
+    // Hash the time and display it
+    hash = SHA256(now)
     document.getElementById("hash").innerHTML = hash
 
 }, 100);
