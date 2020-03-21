@@ -125,15 +125,15 @@ function SHA256(s) {
     return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
 }
 
-
-// Refresh every 100ms
-
+// Update the count down every 100 milliseconds
 var x = setInterval(function() {
-    var now = new Date().getTime();
-    var now = toString(now);
 
-    // Hash the time and display it
-    hash = SHA256(now)
+    // Get todays date and time
+    var now = new Date().getTime();
+    var distance = String(now);
+
+    // Hash the result and display it in the element with id="countdown"
+    hash = SHA256(distance)
     document.getElementById("hash").innerHTML = hash
 
 }, 100);
