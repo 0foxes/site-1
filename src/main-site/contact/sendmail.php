@@ -63,17 +63,19 @@
 
 
             $userIp = getUserIP();
-            $userName 		= $_POST['myName'];
-            $userEmail	 	= $_POST['myEmail'];
-            $userMessage 		= $_POST['myMessage'];
+            $userTime = time();
+            $userName 		= filter_var($_POST['myName'], FILTER_SANITIZE_STRING);
+            $userEmail	 	= filter_var($_POST['myEmail'], FILTER_SANITIZE_STRING);
+            $userMessage 		= filter_var($_POST['myMessage'], FILTER_SANITIZE_STRING);
 
             $sender = 'message@.com';
             $to 	 = "@gmail.com";
             $headers = 'From:' . $sender;
 
-            $subject    = $_POST['mySubject'];
-            $body 			= "Message:";
+            $subject    = filter_var($_POST['mySubject'], FILTER_SANITIZE_STRING);
+            $body 			= "Message submitted with contact form:";
             $body .= "\r\nUser IP: " . $userIp;
+            $body .= "\r\nTime Sent: " . $userTime;
             $body .= "\r\nUser Name: " . $userName;
             $body .= "\r\nUser Email: " . $userEmail;
             $body .= "\r\nUser Message: " . $userMessage;
