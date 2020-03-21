@@ -18,7 +18,7 @@ html, body {
   position: relative;
   color: white;
   font-family: "Roboto Mono", sans-serif;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 /* Position text in the top-left corner */
@@ -26,7 +26,6 @@ html, body {
   position: absolute;
   top: 0;
   left: 20px;
-  font-size: 30px;
   font-family: "Courier"!important;
 }
 
@@ -35,7 +34,6 @@ html, body {
   position: absolute;
   bottom: 0;
   left: 20px;
-  font-size: 30px;
   font-family: "Courier"!important;
 }
 
