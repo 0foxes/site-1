@@ -126,7 +126,7 @@ function SHA256(s) {
 }
 
 // Set the date we're counting down to
-var countDownDate = new Date("Apr 1, 2020 00:00:00").getTime();
+var countDownDate = new Date("Mar 31, 2020 00:00:00").getTime();
 
 // Update the count down every 1 millisecond
 var x = setInterval(function() {
