@@ -81,9 +81,10 @@
                     $name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
                     $email= filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING);
                     $userIp = getUserIP();
+                    $userTime = time();
 
                     // Do the database stuff
-                    $query= "INSERT INTO $table ('name', 'email', 'ip')". "VALUES ('$name', '$email', '$userIp')";
+                    $query = "INSERT INTO $table(name, email, ip)". "VALUES ('$name', '$email', '$userIp')";
                     mysqli_query ($dbc, $query)
                     or die ("Database query error.");
                     echo 'You have been successfully signed up.' . '<br>';
