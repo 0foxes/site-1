@@ -72,8 +72,8 @@
             $to 	 = "@gmail.com";
             $headers = 'From:' . $sender;
 
-            $subject    = filter_var($_POST['mySubject'], FILTER_SANITIZE_STRING);
-            $body 			= "Message submitted with contact form:";
+            $subject    = 'New Message Received:'
+            $body 			= filter_var($_POST['mySubject'], FILTER_SANITIZE_STRING);
             $body .= "\r\nUser IP: " . $userIp;
             $body .= "\r\nTime Sent: " . $userTime;
             $body .= "\r\nUser Name: " . $userName;
