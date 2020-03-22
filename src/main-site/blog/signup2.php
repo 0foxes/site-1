@@ -7,8 +7,8 @@
         <link rel="stylesheet" type="text/css" href="/main-site/assets/css/styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel='icon' href="https://picsum.photos/256" type='image/x-icon' />
-        <title>My Blog</title>
+        <link rel='icon' href="https://picsum.photos/256?random=1" type='image/x-icon' />
+        <title>About Me</title>
         <!-- Mobile-friendly navbar -->
         <nav class="navbar navbar-expand-lg navbar-expand-xl navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
             <div class="navbar-header">
@@ -19,6 +19,7 @@
             <div class="collapse navbar-collapse" id="mainbar">
                 <a class="navbar-brand" href="/"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <!-- Change this -->
                     <a class="nav-item nav-link" href="/">Home</a>
                     <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
                     <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
@@ -33,61 +34,15 @@
     </head>
     <div class="container">
         <div class="page-header" style="padding-top:1em; margin:auto;">
-            <h1>My Blag</h1>
+            <h1>Post Notifications</h1>
         </div>
         <hr>
         <!-- Header ends here -->
         <body>
             <div class="text">
-                <p>All of my blog posts from most recent to oldest:</p>
-                <div class="row">
-                    <!-- One post preview -->
-                    <div class="col-sm-3">
-                        <div class="card">
-                            <img class="card-img-top" src="/main-site/assets/images/earthrise.png" alt="Network error, couldn't load image.">
-                            <div class="card-body">
-                                <h4 class="card-title">My New Website</h4>
-                                <p class="card-text">I'm testing out my self-built blog system, especially setup and design. 21/03/2020</p>
-                                <a href="/main-site/blog/post1/" class="btn btn-primary">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- One post preview -->
-                </div>
-                <hr>
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="signup">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse11">
-                                Sign up to be notified of new posts
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapse" class="collapse" aria-labelledby="signup" data-parent="#accordion">
-                            <div class="card-body">
-                                <div class="row">
-                                    <!-- form goes here -->
-                                    <div class="col-sm-12">
-                                        <div class="form">
-                                            <form method="POST" action="signup2.php">
-                                                <div><label>Your Name:</label></div>
-                                                <div><input type="text" name="userName" class="form-control" required/></div>
-                                                <br>
-                                                <div><label>Your Email:</label></div>
-                                                <div><input type="text" name="userEmail" class="form-control" required/></div>
-                                                <br>
-                                                <div class="float-right mt-2">
-                                                    <input type="submit" value="Sign Up!" class="btn btn-primary"/>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                    echo "testing"
+                    ?>
             </div>
             <!-- Footer starts here -->
     </div>
@@ -113,7 +68,7 @@
                 </li>
             </ul>
         </div>
-        <div class="text-center text-secondary" style="font-size: 0.8rem; color: black!important;">
+        <div class="text-center text-secondary" style="font-size: 0.75rem; color: black!important;">
             <p>Copyright , 2020</p>
         </div>
         </div>
