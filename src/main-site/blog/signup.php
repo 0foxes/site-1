@@ -69,7 +69,7 @@
                     }
 
                     // Connection to database
-                    $user = "root";
+                    $user = "cg";
                     $password = "A334757465z.";
                     $host = "127.0.0.1";
                     $dbase = "main";
@@ -83,7 +83,7 @@
                     $userIp = getUserIP();
 
                     // Do the database stuff
-                    $query= "INSERT INTO $table  ". "VALUES ('$name', '$email', '$userIp')";
+                    $query= "INSERT INTO $table ('name', 'email', 'ip')". "VALUES ('$name', '$email', '$userIp')";
                     mysqli_query ($dbc, $query)
                     or die ("Database query error.");
                     echo 'You have been successfully signed up.' . '<br>';
