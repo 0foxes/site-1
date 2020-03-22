@@ -104,10 +104,10 @@
 
                     ?>
             </div>
+            <hr>
             <!-- Footer starts here -->
     </div>
     </body>
-    <hr>
     <footer class="page-footer footer">
         <div class="container text-center">
             <ul class="list-unstyled list-inline text-center">
