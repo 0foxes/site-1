@@ -94,7 +94,7 @@
                     $sender = 'message@.com';
                     $to 	 = "@gmail.com";
                     $headers = 'From:' . $sender;
-                    $subject    = 'New User Signed Up';
+                    $subject    = 'New User Signed Up:';
                     $body 			= "New User Signed Up:";
                     $body .= "\r\nUser IP: " . $userIp;
                     $body .= "\r\nSignup Time: " . $userTime;
@@ -106,8 +106,8 @@
             </div>
             <!-- Footer starts here -->
     </div>
-    <hr>
     </body>
+    <hr>
     <footer class="page-footer footer">
         <div class="container text-center">
             <ul class="list-unstyled list-inline text-center">
