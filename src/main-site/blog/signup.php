@@ -40,7 +40,49 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
-                <p>Text</p>
+
+
+
+
+
+<?php
+// Connection to database
+$user = "root";
+$password = "A334757465z.";
+$host = "localhost";
+$dbase = "main";
+$table = "emails";
+$dbc= mysqli_connect($host,$user,$password, $dbase)
+or die("Database selection error.");
+
+// Info from the form
+$name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
+$email= filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING);
+$userIp = getUserIP();
+
+// Do the database stuff
+$query= "INSERT INTO $table  ". "VALUES ('$name', '$email', '$userIp')";
+mysqli_query ($dbc, $query)
+or die ("Database query error.");
+echo 'You have been successfully signed up.' . '<br>';
+mysqli_close($dbc);
+
+// Notify me by email
+$sender = 'message@.com';
+$to 	 = "@gmail.com";
+$headers = 'From:' . $sender;
+
+$subject    = 'New User Signed Up';
+$body 			= "New User Signed Up:";
+$body .= "\r\nUser IP: " . $userIp;
+$body .= "\r\nSignup Time: " . $userTime;
+$body .= "\r\nUser Name: " . $name;
+$body .= "\r\nUser Email: " . $email;
+mail($to, $subject, $body, $headers);
+
+?>
+
+
                 </div>
                 <!-- Footer starts here -->
             </div>
