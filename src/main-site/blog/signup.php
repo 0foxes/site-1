@@ -66,7 +66,7 @@
                     // Connection to database
                     $user = "root";
                     $password = "A334757465z.";
-                    $host = "68.183.194.105";
+                    $host = "localhost";
                     $dbase = "main";
                     $table = "emails";
                     $dbc = mysqli_connect($host, $user, $password, $dbase)
