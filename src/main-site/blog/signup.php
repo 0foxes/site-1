@@ -42,10 +42,29 @@
             <div class="text">
 
 
-
-
-
 <?php
+// Get user IP
+function getUserIP(){
+  $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
+  $forwardIp = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+  $remoteIp  = $_SERVER['REMOTE_ADDR'];
+
+  if(filter_var($clientIp, FILTER_VALIDATE_IP))
+  {
+      $ip = $clientIp;
+  }
+  elseif(filter_var($forwardIp, FILTER_VALIDATE_IP))
+  {
+      $ip = $forwardIp;
+  }
+  else
+  {
+      $ip = $remoteIp;
+  }
+
+  return $ip;
+}
+
 // Connection to database
 $user = "root";
 $password = "A334757465z.";
