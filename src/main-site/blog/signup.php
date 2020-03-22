@@ -66,10 +66,10 @@
                     // Connection to database
                     $user = "root";
                     $password = "A334757465z.";
-                    $host = "localhost";
+                    $host = "68.183.194.105";
                     $dbase = "main";
                     $table = "emails";
-                    $dbc = mysqli_connect($host,$user,$password, $dbase)
+                    $dbc = mysqli_connect($host, $user, $password, $dbase)
                     or die("Database selection error.");
 
                     // Info from the form
