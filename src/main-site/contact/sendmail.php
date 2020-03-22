@@ -72,7 +72,7 @@
             $to 	 = "@gmail.com";
             $headers = 'From:' . $sender;
 
-            $subject    = 'New Message Received:'
+            $subject    = 'New Message Received:';
             $body 			= filter_var($_POST['mySubject'], FILTER_SANITIZE_STRING);
             $body .= "\r\nUser IP: " . $userIp;
             $body .= "\r\nTime Sent: " . $userTime;
