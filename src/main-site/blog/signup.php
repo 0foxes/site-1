@@ -84,7 +84,7 @@
                     $userTime = time();
 
                     // Do the database stuff
-                    $query = "INSERT INTO $table(name, email, ip)". "VALUES ('$name', '$email', '$userIp')";
+                    $query = "INSERT IGNORE INTO $table(name, email, ip)". "VALUES ('$name', '$email', '$userIp')";
                     mysqli_query ($dbc, $query)
                     or die ("Database query error.");
                     echo 'You have been successfully signed up.' . '<br>';
