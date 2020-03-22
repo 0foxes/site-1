@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse" id="mainbar">
                 <a class="navbar-brand" href="/"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                  <!-- Change this -->
+                    <!-- Change this -->
                     <a class="nav-item nav-link" href="/">Home</a>
                     <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
                     <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
@@ -40,97 +40,92 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
+                <?php
+                    // Get user IP
+                    function getUserIP(){
+                      $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
+                      $forwardIp = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+                      $remoteIp  = $_SERVER['REMOTE_ADDR'];
 
+                      if(filter_var($clientIp, FILTER_VALIDATE_IP))
+                      {
+                          $ip = $clientIp;
+                      }
+                      elseif(filter_var($forwardIp, FILTER_VALIDATE_IP))
+                      {
+                          $ip = $forwardIp;
+                      }
+                      else
+                      {
+                          $ip = $remoteIp;
+                      }
 
-<?php
-// Get user IP
-function getUserIP(){
-  $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
-  $forwardIp = @$_SERVER['HTTP_X_FORWARDED_FOR'];
-  $remoteIp  = $_SERVER['REMOTE_ADDR'];
+                      return $ip;
+                    }
 
-  if(filter_var($clientIp, FILTER_VALIDATE_IP))
-  {
-      $ip = $clientIp;
-  }
-  elseif(filter_var($forwardIp, FILTER_VALIDATE_IP))
-  {
-      $ip = $forwardIp;
-  }
-  else
-  {
-      $ip = $remoteIp;
-  }
+                    // Connection to database
+                    $user = "root";
+                    $password = "A334757465z.";
+                    $host = "localhost";
+                    $dbase = "main";
+                    $table = "emails";
+                    $dbc = mysqli_connect($host,$user,$password, $dbase)
+                    or die("Database selection error.");
 
-  return $ip;
-}
+                    // Info from the form
+                    $name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
+                    $email= filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING);
+                    $userIp = getUserIP();
 
-// Connection to database
-$user = "root";
-$password = "A334757465z.";
-$host = "localhost";
-$dbase = "main";
-$table = "emails";
-$dbc= mysqli_connect($host,$user,$password, $dbase)
-or die("Database selection error.");
+                    // Do the database stuff
+                    $query= "INSERT INTO $table  ". "VALUES ('$name', '$email', '$userIp')";
+                    mysqli_query ($dbc, $query)
+                    or die ("Database query error.");
+                    echo 'You have been successfully signed up.' . '<br>';
+                    mysqli_close($dbc);
 
-// Info from the form
-$name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
-$email= filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING);
-$userIp = getUserIP();
+                    // Notify me by email
+                    $sender = 'message@.com';
+                    $to 	 = "@gmail.com";
+                    $headers = 'From:' . $sender;
+                    $subject    = 'New User Signed Up';
+                    $body 			= "New User Signed Up:";
+                    $body .= "\r\nUser IP: " . $userIp;
+                    $body .= "\r\nSignup Time: " . $userTime;
+                    $body .= "\r\nUser Name: " . $name;
+                    $body .= "\r\nUser Email: " . $email;
+                    mail($to, $subject, $body, $headers);
 
-// Do the database stuff
-$query= "INSERT INTO $table  ". "VALUES ('$name', '$email', '$userIp')";
-mysqli_query ($dbc, $query)
-or die ("Database query error.");
-echo 'You have been successfully signed up.' . '<br>';
-mysqli_close($dbc);
-
-// Notify me by email
-$sender = 'message@.com';
-$to 	 = "@gmail.com";
-$headers = 'From:' . $sender;
-
-$subject    = 'New User Signed Up';
-$body 			= "New User Signed Up:";
-$body .= "\r\nUser IP: " . $userIp;
-$body .= "\r\nSignup Time: " . $userTime;
-$body .= "\r\nUser Name: " . $name;
-$body .= "\r\nUser Email: " . $email;
-mail($to, $subject, $body, $headers);
-
-?>
-
-
-                </div>
-                <!-- Footer starts here -->
+                    ?>
             </div>
-            <hr>
-        </body>
-        <footer class="page-footer footer">
-            <div class="container text-center">
-                <ul class="list-unstyled list-inline text-center">
-                    <li class="list-inline-item">
-                        <a href="https://.com" class="text-dark"><i class="zoom fa fa-globe fa-2x px-2"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/" class="text-dark"><i class="zoom fab fa-github fa-2x px-2"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="mailto:@gmail.com" class="text-dark"><i class="zoom fa fa-envelope fa-2x px-2"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://pastebin.com/raw/exZuYWUq" class="text-dark"><i class="zoom fab fa-discord fa-2x px-2"></i></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="/main-site/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
-                    </li>
-                </ul>
-            </div>
-            <div class="text-center text-secondary" style="font-size: 0.75rem; color: black!important;">
-                <p>Copyright , 2020</p>
-            </div>
+            <!-- Footer starts here -->
     </div>
+    <hr>
+    </body>
+    <footer class="page-footer footer">
+        <div class="container text-center">
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="https://.com" class="text-dark"><i class="zoom fa fa-globe fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/" class="text-dark"><i class="zoom fab fa-github fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="mailto:@gmail.com" class="text-dark"><i class="zoom fa fa-envelope fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://pastebin.com/raw/exZuYWUq" class="text-dark"><i class="zoom fab fa-discord fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="/main-site/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center text-secondary" style="font-size: 0.75rem; color: black!important;">
+            <p>Copyright , 2020</p>
+        </div>
+        </div>
     </footer>
     <!-- Various JS libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
