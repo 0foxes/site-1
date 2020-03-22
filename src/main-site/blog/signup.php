@@ -41,6 +41,11 @@
         <body>
             <div class="text">
                 <?php
+                    // Display all errors
+                    ini_set('display_errors', 1);
+                    ini_set('display_startup_errors', 1);
+                    error_reporting(E_ALL);
+                    
                     // Get user IP
                     function getUserIP(){
                       $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
