@@ -45,7 +45,7 @@
                     ini_set('display_errors', 1);
                     ini_set('display_startup_errors', 1);
                     error_reporting(E_ALL);
-                    
+
                     // Get user IP
                     function getUserIP(){
                       $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
@@ -71,11 +71,11 @@
                     // Connection to database
                     $user = "root";
                     $password = "A334757465z.";
-                    $host = "localhost";
+                    $host = "127.0.0.1";
                     $dbase = "main";
                     $table = "emails";
                     $dbc = mysqli_connect($host, $user, $password, $dbase)
-                    or die("Database selection error.");
+                    or die("Database connection error.");
 
                     // Info from the form
                     $name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
