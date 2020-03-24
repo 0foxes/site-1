@@ -17,10 +17,10 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="mainbar">
-                <a class="navbar-brand" href="/main-site//"></a>
+                <a class="navbar-brand" href="/"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <!-- Change this -->
-                    <a class="nav-item nav-link" href="/main-site//">Home</a>
+                    <a class="nav-item nav-link" href="/">Home</a>
                     <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
                     <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
                     <a class="nav-item nav-link" href="/main-site/projects/">My Projects</a>
