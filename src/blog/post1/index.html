@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/main-site/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/main-site/assets/css/styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel='icon' href="https://picsum.photos/256" type='image/x-icon' />
@@ -20,11 +20,11 @@
                 <a class="navbar-brand" href="/"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <a class="nav-item nav-link" href="/">Home</a>
-                    <a class="nav-item nav-link" href="about/">About Me</a>
-                    <a class="nav-item nav-link" href="resume/">My Resume</a>
-                    <a class="nav-item nav-link" href="projects/">My Projects</a>
-                    <a class="nav-item nav-link active" href="blog/">My Blog</a>
-                    <a class="nav-item nav-link" href="contact/">Contact Me</a>
+                    <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
+                    <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
+                    <a class="nav-item nav-link" href="/main-site/projects/">My Projects</a>
+                    <a class="nav-item nav-link active" href="/main-site/blog/">My Blog</a>
+                    <a class="nav-item nav-link" href="/main-site/contact/">Contact Me</a>
                 </ul>
                 <ul class="navbar-nav navbar-right">
                 </ul>
@@ -45,12 +45,12 @@
                 <p>Before we get into how to help, let's take a quick look at what distributed computing is. Essentially, it's a computer system that runs over multiple different computers. Those different computers are all responsible for doing a small part of the work, and the entire system either communicates through a "command" server or directly with each other. Instead of building a supercomputer with thousands of computer parts, you can have 100 smaller computers that work with each other.</p>
                 <p>Some advantages include that anyone can participate as long as they have a computer/phone, it doesn't need special hardware, if one computer fails the rest of the system isn't affected, and it can be more powerful than the biggest supercomputers. Some disadvantages are the high cost if one person is paying for all the computers, and that not all tasks can be divided up among different computers (such as video game graphics and decoding videos).</p>
                 <figure class="figure">
-                    <img src="assets/images/night_sky.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                    <img src="/main-site/assets/images/night_sky.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
                     <figcaption class="figure-caption">SETI@Home (which recently shut down) analyzed radio signals for evidence of extraterrestrial life</figcaption>
                 </figure>
                 <p>Distributed programs are programs that run on distributed computer systems. They're typically programs anyone can download, and after they're installed they automatically receive tasks and data from a command server coordinating everything. Some examples you may have heard of include <a href="https://setiathome.berkeley.edu/">SETI@Home</a> (which analyzes radio signals for aliens), <a href="https://boinc.berkeley.edu/">BOINC</a> (a platform anyone can use to create distributed programs), and <a href="https://www.mersenne.org/">GIMPS</a> (which looks for very large prime numbers). <a href="https://en.wikipedia.org/wiki/Folding@home">Folding@Home</a> is another distributed computing project with a biomedical focus. So what does Folding@Home actually do?</p>
                 <figure class="figure">
-                    <img src="assets/images/protein_folding.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                    <img src="/main-site/assets/images/protein_folding.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
                     <figcaption class="figure-caption">Folding@Home uses Markov Models to simulate proteins</figcaption>
                 </figure>
                 <p><a href="https://en.wikipedia.org/wiki/Folding@home">Folding@Home</a> is a distributed computing project that focuses on how proteins fold. This may not sound very exciting, but how proteins fold (or misfold) is deeply linked with diseases such as cancer, Alzheimer's, Ebola, Huntington's, and now COVID-19. Through Folding@Home, normal people can "donate" their computing power through a program which then allows scientists to run simulations on it. It helps scientists at every step of the process, from identifying possible drugs, testing them, and finally analyzing their effectiveness. Instead of spending millions on a few weeks of supercomputer time, scientists can split their simulation up into small "Work Units" individual computers can run, and spend the money more effectively. Here are some cool facts about Folding@Home:</p>
@@ -68,7 +68,7 @@
                         Regardless of hardware, anyone can make the breakthrough that leads to a vaccine (but your chances may vary)
                     </li>
                 </ul>
-                <p>If this sounds exciting, you're probably wondering how you can help. Personally, I've been participating in this since 2017 and have completed quite a few Work Units. Here's how to set up everything and get started. If you need any help, <a href="contact/">shoot me an email</a>.</p>
+                <p>If this sounds exciting, you're probably wondering how you can help. Personally, I've been participating in this since 2017 and have completed quite a few Work Units. Here's how to set up everything and get started. If you need any help, <a href="/main-site/contact/">shoot me an email</a>.</p>
                 <ul>
                     <li>
                         <a href="https://foldingathome.org/alternative-downloads/">Download</a> the right installer for your operating system
@@ -85,16 +85,16 @@
                 </ul>
                 <p>FAQs without the questions: To avoid your computer slowing down, choose "Fold only when idle". Your computer's fan might speed up a little. To fight coronavirus, choose "I support research fighting any disease". If it says "waiting on server", it means there are so many people helping the command server ran out of work (it'll automatically get work eventually). GPUs fold faster than CPUs, but they both help. DigitalOcean and Amazon EC2 instances work as well. Check your stats <a href="https://stats.foldingathome.org">here</a>.</p>
                 <figure class="figure">
-                    <img src="assets/images/out_of_work.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                    <img src="/main-site/assets/images/out_of_work.png" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
                     <figcaption class="figure-caption">With 400k new users in the past week, Folding@Home has sometimes run out of simulations for users to run</figcaption>
                 </figure>
                 <p>
-                    Once again, <a href="contact/">email me</a> if you need any help at all. Good luck, and have fun!</p>
+                    Once again, <a href="/main-site/contact/">email me</a> if you need any help at all. Good luck, and have fun!</p>
                     <!-- Footer starts here -->
             </div>
             <br>
-            <button type="button" class="btn btn-primary"><a href="blog/" style="color:white!important;">Return to Blog</a></button>
-            <button type="button" class="btn btn-primary"><a href="blog#signup" style="color:white!important;">Get Notified of New Posts</a></button>
+            <button type="button" class="btn btn-primary"><a href="/main-site/blog/" style="color:white!important;">Return to Blog</a></button>
+            <button type="button" class="btn btn-primary"><a href="/main-site/blog#signup" style="color:white!important;">Get Notified of New Posts</a></button>
             <hr>
         </body>
         <footer class="page-footer footer">
@@ -113,7 +113,7 @@
                         <a href="https://pastebin.com/raw/exZuYWUq" class="text-dark"><i class="zoom fab fa-discord fa-2x px-2"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
+                        <a href="/main-site/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
                     </li>
                 </ul>
             </div>
