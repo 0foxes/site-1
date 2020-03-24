@@ -18,9 +18,9 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="mainbar">
-                <a class="navbar-brand" href="//"></a>
+                <a class="navbar-brand" href="/"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <a class="nav-item nav-link" href="//">Home</a>
+                    <a class="nav-item nav-link" href="/">Home</a>
                     <a class="nav-item nav-link" href="/about/">About Me</a>
                     <a class="nav-item nav-link" href="/resume/">My Resume</a>
                     <a class="nav-item nav-link" href="/projects/">My Projects</a>
