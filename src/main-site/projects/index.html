@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="/main-site/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/main-site/assets/css/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel='icon' href="https://picsum.photos/256" type='image/x-icon' />
+    <title>My Projects</title>
+    <!-- Mobile-friendly navbar -->
+    <nav class="navbar navbar-expand-lg navbar-expand-xl navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="navbar-header">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="mainbar">
+            <a class="navbar-brand" href="/main-site//"></a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <a class="nav-item nav-link" href="/main-site//">Home</a>
+                <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
+                <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
+                <a class="nav-item nav-link active" href="/main-site/projects/">My Projects</a>
+                <a class="nav-item nav-link" href="/main-site/blog/">My Blog</a>
+                <a class="nav-item nav-link" href="/main-site/contact/">Contact Me</a>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+            </ul>
+        </div>
+    </nav>
+</head>
+<div class="container">
+    <div class="page-header" style="padding-top:1em; margin:auto;">
+        <h1>My Projects</h1>
+    </div>
+    <hr>
+    <!-- Header ends here -->
+
+    <body>
+        <div class="text">
+            <p>I haven't put everything on <a href="https://github.com/">Github</a> yet (at least not in public repos), so some of these projects may not be on there. If you want the source code for one of those projects, ask me <a href="/main-site/contact/">here</a>. I'll probably write about my future projects on <a href="/main-site/blog/">my blog</a>.</p>
+            <!-- Collapse xy where x is the number of the list, and y is the element number -->
+            <hr>
+            <h4>Projects I've worked on in the past:</h4>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+                                My own cryptocurrency on the Ropsten ETH testnet
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse11" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>After first doing a test run, I created <a href="https://ropsten.etherscan.io/tx/0x78088feafba042777b4e4bef6d8dd591ceae567e0e720505f117d05a56a3eb3d">my own ethereum token</a> on the Ropsten testnet. I started by setting up a wallet, then manually mining ETH for the contract gas. Then, I coded the smart contract in Solidity based off a template and deployed the contract on MyEtherWallet. Finally, I verified and published the source code, as is standard practice for many ethereum-based apps. The token may not have been very useful besides turning ETH into tokens, but this could be the foundation of something bigger, like a decentralised application (otherwise known as a DApp) or as a foundation for an ICO, which I later made.</p>
+                                    <br>
+                                    <p>Source Code: <a href="https://ropsten.etherscan.io/address/0x2eca6f051c395f3c94c86369dcf39765a5dabc42#code">https://ropsten.etherscan.io/address/0x2eca6f051c395f3c94c86369dcf39765a5dabc42#code</a></p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="float-right" src="/main-site/assets/images/ethereum.png" alt="Network error, couldn't load image."></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                                A program to graph the number of users "online" in a certain subreddit
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse12" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>
+                                        Using Python, the module "requests", the Reddit API and matplotlib, I was able to code two programs to get and graph the number of active users on a subreddit, in real-time. One program made a request to Reddit, parsed the JSON response, then logged the time and the number of active users into a text file. The second program used matplotlib to plot and show a live graph of the number of online users. Although the two programs initially required Python to run, I was able to pack them into .exe's without dependencies with the help of PyInstaller.
+                                    </p>
+                                    <br>
+                                    <p>Source Code: <a href="https://github.com//public-projects/tree/master/online-users">https://github.com//public-projects/tree/master/online-users</a></p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="float-right" src="/main-site/assets/images/graph.png" alt="Network error, couldn't load image."></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Projects I'm currently working on:</h4>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                                My own website (this one)
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse21" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>I'm currently working on a website to demonstrate my coding, design, and stackoverflowing skills. It's also so someone else doesn't come along and take this domain name later, and so I can share my projects and thoughts with the world. If you're reading this, you're on my website. Congratulations.</p>
+                                    <br>
+                                    <p>Source Code: Press CTRL + U</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="float-right" src="/main-site/assets/images/website.png" alt="Network error, couldn't load image."></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                                Some stuff for my robotics team
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse22" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>I've been doing robotics for a few years, and this year I've been preparing for a robotics competition (as usual). It might be delayed or cancelled because of the new Coronavirus (COVID-19), but in the meantime my teammates and I are still preparing. As it's an ongoing competition, I can't say much about it.</p>
+                                    <br>
+                                    <p>Source Code: Unavailable</p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="float-right" src="/main-site/assets/images/robot.png" alt="Network error, couldn't load image."></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                                Using AI and Deep Learning to simulate online conversations
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse23" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <p>Machine learning and deep learning may be hyped, but the reality is they need a lot of computational resources (such as powerful GPUs) to run properly. My GPU was on the slow side and I had always wanted to try my hand at AI, so imagine my excitement when I learned about <a href="https://colab.research.google.com">Google Colab</a>, which lets regular people play with Tesla GPUs in the cloud through Jupyter Python notebooks. I also found <a href="https://github.com/minimaxir/gpt-2-simple">GPT-2-Simple</a>, a "simple" Python wrapper for GPT-2 (a popular deep learning language model). I started by downloading all the chat logs of a major Discord server in .txt format using <a href="https://github.com/Tyrrrz/DiscordChatExporter">this</a>, which I then processed into "tokens" of training data. Then, I set up everything in the cloud, and started training it. Since training a model takes a while, it's still training as I type this. Hopefully it finishes before Google boots me for using too many resources...
+                                    </p>
+                                    <br>
+                                    <p>Source Code: <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce</a></p>
+                                </div>
+                                <div class="col-sm-6">
+                                    <img class="float-right" src="/main-site/assets/images/gpt.png" alt="Network error, couldn't load image."></img>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Projects I plan to work on:</h4>
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse31" aria-expanded="true" aria-controls="collapse31">
+                                A cool homepage for this website
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse31" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>The <a href="/">current homepage</a> looks nice, but it's not really interesting and it doesn't really have a lot of content. In the future, I plan to look at ways of making the homepage more interesting and adding content. Maybe I'll even use the marquee tag!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                                Uploading everything to Github and organising everything there
+                                </button>
+                            </h5>
+                    </div>
+                    <div id="collapse32" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>
+                                Even though I'm reasonably organised in everything else, my code is all over the place. I want to move all of my coding to <a href="https://github.com/">Github</a> and organise everything there. I'm doing this so:
+                            </p>
+                            <ul>
+                                <li>It'll be easier to find code I need</li>
+                                <li>It's easier to open source code this way</li>
+                                <li>It's good to learn git and Github by extension</li>
+                                <li>And finally, it's good to have a backup if my computer ever breaks again</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer starts here -->
+        </div>
+        <hr>
+    </body>
+    <footer class="page-footer footer">
+        <div class="container text-center">
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="https://.com" class="text-dark"><i class="zoom fa fa-globe fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://github.com/" class="text-dark"><i class="zoom fab fa-github fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="mailto:@gmail.com" class="text-dark"><i class="zoom fa fa-envelope fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://pastebin.com/raw/exZuYWUq" class="text-dark"><i class="zoom fab fa-discord fa-2x px-2"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="/main-site/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-center text-secondary" style="font-size: 0.8rem; color: black!important;">
+            <p>Copyright , 2020</p>
+        </div>
+</div>
+</footer>
+<!-- Various JS libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</html>

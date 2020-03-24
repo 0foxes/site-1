@@ -125,15 +125,25 @@ function SHA256(s) {
     return binb2hex(core_sha256(str2binb(s), s.length * chrsz));
 }
 
-// Update the count down every 100 milliseconds
+// Set the date we're counting down to
+var countDownDate = new Date("Mar 25, 2020 00:00:00").getTime();
+
+// Update the count down every 1 millisecond
 var x = setInterval(function() {
 
     // Get todays date and time
     var now = new Date().getTime();
-    var distance = String(now);
+
+    // Find the distance between now and the countdown date in milliseconds
+    var distance = String(countDownDate - now);
 
     // Hash the result and display it in the element with id="countdown"
     hash = SHA256(distance)
-    document.getElementById("hash").innerHTML = hash
+    document.getElementById("countdown").innerHTML = hash
 
+    // If the countdown is finished, write some text
+    if (distance <= 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "Main Site Launching Soon";
+    }
 }, 100);
