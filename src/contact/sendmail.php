@@ -3,12 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/main-site/assets/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/main-site/assets/css/styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel='icon' href="https://picsum.photos/256" type='image/x-icon' />
-        <script src = "/assets/js/index.js"></script>
+        <script src = "/main-site/assets/js/index.js"></script>
         <title>Message Sent</title>
         <!-- Mobile-friendly navbar -->
         <nav class="navbar navbar-expand-lg navbar-expand-xl navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
@@ -18,14 +18,14 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="mainbar">
-                <a class="navbar-brand" href="//"></a>
+                <a class="navbar-brand" href="/main-site//"></a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <a class="nav-item nav-link" href="//">Home</a>
-                    <a class="nav-item nav-link" href="/about/">About Me</a>
-                    <a class="nav-item nav-link" href="/resume/">My Resume</a>
-                    <a class="nav-item nav-link" href="/projects/">My Projects</a>
-                    <a class="nav-item nav-link" href="/blog/">My Blog</a>
-                    <a class="nav-item nav-link active" href="/contact/">Contact Me</a>
+                    <a class="nav-item nav-link" href="/main-site//">Home</a>
+                    <a class="nav-item nav-link" href="/main-site/about/">About Me</a>
+                    <a class="nav-item nav-link" href="/main-site/resume/">My Resume</a>
+                    <a class="nav-item nav-link" href="/main-site/projects/">My Projects</a>
+                    <a class="nav-item nav-link" href="/main-site/blog/">My Blog</a>
+                    <a class="nav-item nav-link active" href="/main-site/contact/">Contact Me</a>
                 </ul>
                 <ul class="navbar-nav navbar-right">
                 </ul>
@@ -105,7 +105,7 @@
                         <a href="https://pastebin.com/raw/exZuYWUq" class="text-dark"><i class="zoom fab fa-discord fa-2x px-2"></i></a>
                     </li>
                     <li class="list-inline-item">
-                        <a href="/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
+                        <a href="/main-site/contact/pgp/" class="text-dark"><i class="zoom fas fa-key fa-2x px-2"></i></a>
                     </li>
                 </ul>
             </div>
