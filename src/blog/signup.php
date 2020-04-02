@@ -89,6 +89,7 @@
                     mysqli_query ($dbc, $query)
                     or die ("Database query error.");
                     echo 'You have been successfully signed up.' . '<br>';
+                    echo '<br>';
                     echo 'To unsubscribe, email <a href="mailto:@gmail.com">@gmail.com</a>.';
                     mysqli_close($dbc);
 
