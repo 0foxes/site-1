@@ -78,8 +78,8 @@
                     or die("Database connection error.");
 
                     // Info from the form
-                    $name= filter_var($_POST['userName'], FILTER_SANITIZE_STRING);
-                    $email= filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING);
+                    $name= $mysqli -> real_escape_string(filter_var($_POST['userName'], FILTER_SANITIZE_STRING));
+                    $email= $mysqli -> real_escape_string(filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING));
                     $userIp = getUserIP();
                     $userTime = time();
 
