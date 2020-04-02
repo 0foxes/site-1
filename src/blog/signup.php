@@ -78,14 +78,15 @@
                     or die("Database connection error.");
 
                     // Info from the form
-                    $name = mysqli_real_escape_string($dbc, $_POST['userName'], FILTER_SANITIZE_STRING);
-                    $email = mysqli_real_escape_string($dbc, $_POST['userEmail'], FILTER_SANITIZE_STRING);
+                    $name = mysqli_real_escape_string($dbc, filter_var($_POST['userName'], FILTER_SANITIZE_STRING));
+                    $email = mysqli_real_escape_string($dbc, filter_var($_POST['userEmail'], FILTER_SANITIZE_STRING));
                     $userIp = getUserIP();
                     $userTime = time();
 
                     // Do the database stuff
                     $query = "INSERT IGNORE INTO $table(name, email, ip, signuptime)". "VALUES ('$name', '$email', '$userIp', '$userTime')";
-                    echo $query;
+
+                    mysqli_query ($dbc, $query)
                     or die ("Database query error.");
                     echo 'You have been successfully signed up.' . '<br>';
                     echo 'To unsubscribe, email <a href="mailto:@gmail.com">@gmail.com</a>.';
