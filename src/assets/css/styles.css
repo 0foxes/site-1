@@ -9,7 +9,7 @@ html, body {
 }
 /* Background image */
 .bgimg {
-  background-image: url('/assets/images/ship.png');
+  background-image: url('/assets/images/ship.webp');
   height: 100vh!important;
   background-position: center!important;
   background-size: cover!important;
