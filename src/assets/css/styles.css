@@ -48,10 +48,5 @@ html, body {
 }
 /* Homepage darken image */
 .homepage{
-  background-image: url('/assets/images/solid-black.webp');
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.1!important;
+  background: rgba(192, 192, 192, 0.2);
 }
