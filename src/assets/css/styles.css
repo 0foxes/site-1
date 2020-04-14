@@ -46,7 +46,3 @@ html, body {
 .navbar {
   border-bottom: solid #eeeeee 2px;
 }
-/* Homepage darken image */
-.homepage{
-  background: rgba(192, 192, 192, 0.2);
-}
