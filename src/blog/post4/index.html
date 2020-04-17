@@ -66,6 +66,16 @@
                         <figcaption class="figure-caption">Lightkey is one of the numerous text-prediction programs available today / Lightkey</figcaption>
                     </figure>
                 </div>
+                <p>To use machine learning to generate text, you start with a prompt. Then the AI picks the most likely words from the language model, but slightly randomizes it so it doesn’t always generate the same sentences. As machine learning is self-learning by definition, when you train your AI it compares the generated text to the prompt and human-written texts and adjusts itself to sound more coherent and human-like. Finally, you can “bias” your language model to change its style of writing by feeding it different pieces of text in the beginning. If you want it to sound like J. K. Rowling, you feed it the Harry Potter books. If you want it to write blog posts for you (this is written by me, I promise) you feed it your previous blog posts. If you want a Shakespearean parody, you feed it Shakespeare (all of his plays are available as one text file <a href="https://cs.stanford.edu/people/karpathy/char-rnn/shakespeare_input.txt">here</a>). The saying “you are what you eat” definitely goes double for language models!</p>
+                <hr>
+                <p>Today, we’re going to be training the <a href="https://openai.com/blog/better-language-models/">GPT-2</a> language model. A smaller (and less powerful) version of the model was first released in February 2019, since the larger versions were famously deemed <a href="https://www.theguardian.com/technology/2019/feb/14/elon-musk-backed-ai-writes-convincing-news-fiction">“too dangerous to release”</a> by AI researchers. Nevertheless, the researchers relented and the full version was released in November 2019. It comes in four sizes (small, medium, large, and extra large), but we’ll be using the two smallest sizes because they’re faster and easier to work with. The “small” sized model has a <a href="https://openai.com/blog/gpt-2-1-5b-release/">79.3% accuracy</a> compared to the extra large model, and the medium model has a 91.8% accuracy.</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/accuracy.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">The text gets more accurate as the model size gets bigger, but the improvements diminish / OpenAI</figcaption>
+                    </figure>
+                </div>
+                <p>Although we need a moderately powerful GPU (at minimum) to work with the “small” model, we can use <a href="https://colab.research.google.com/">Google Colaboratory</a> instead. It allows you to access very powerful (and expensive) GPUs and run Python code on them, all within your browser. It’s primarily used by students and researchers all around the world for AI-related tasks, such as machine/deep learning frameworks, training models, and developing applications that utilize AI.</p>
                 <!-- Footer starts here -->
             </div>
             <br>
