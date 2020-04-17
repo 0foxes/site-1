@@ -56,7 +56,14 @@
                 <div class="text-center">
                     <figure class="figure">
                         <img src="/assets/images/ai-dungeon.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
-                        <figcaption class="figure-caption">AI dungeon is a text-based "dungeon crawler" game, in which you explore and battle your way through a dungeon / AI Dungeon</figcaption>
+                        <figcaption class="figure-caption">AI dungeon is a text-based "dungeon crawler" game, in which you explore and battle your way through an entire world / AI Dungeon</figcaption>
+                    </figure>
+                </div>
+                <p>I won’t get into most of the technical details, but here’s a brief overview of how most language models work. You input a lot of text (sometimes gigabytes of plain text), and the model splits it up into “tokens”, individual words or pieces of punctuation. It then counts how often a word appears after another word (for example, “example” often appears after “for”), how often a word appears after two other words (for example, “a” often follows “once upon”), how often a word appears after three other words, and so on. A string of words commonly found together is called an <a href="https://en.wikipedia.org/wiki/N-gram">n-gram</a>, with n being the number of words. After the language model calculates all this, you can input any word or sentence and get a list of probabilities for which word appears after that. Predictive text just starts with a prompt, picks the most likely word to appear after that, and repeats. But what if you wanted to generate longer, more coherent text?</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/lightkey.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">Lightkey is one of the numerous text-prediction programs available today / Lightkey</figcaption>
                     </figure>
                 </div>
                 <!-- Footer starts here -->
