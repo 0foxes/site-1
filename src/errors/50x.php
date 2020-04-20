@@ -34,7 +34,7 @@
     </head>
     <div class="container">
         <div class="page-header" style="padding-top:1em; margin:auto;">
-            <h1>Error 50X</h1>
+            <h1>Error</h1>
         </div>
         <hr>
         <!-- Header ends here -->
@@ -44,10 +44,10 @@
               <?php
               $code = $_SERVER['REDIRECT_STATUS'];
               if (empty($code)) {
-                header("Location: https://www..com/errors/40x.php");
-              } else {
-                echo "Server Error: Error " . $code;
-              }
+                echo "Error 404";
+                } else {
+                  echo "Server Error: Error " . $code;
+                }
               ?>
 
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
