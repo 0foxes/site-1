@@ -34,27 +34,24 @@
     </head>
     <div class="container">
         <div class="page-header" style="padding-top:1em; margin:auto;">
-            <h1>Error</h1>
+            <?php
+            $code = $_SERVER['REDIRECT_STATUS'];
+            if (empty($code)) {
+                echo "Error 404.";
+              } else {
+                echo "Error " . $code;
+              }
+            ?>
         </div>
         <hr>
         <!-- Header ends here -->
         <body>
           <div class="text">
-
-              <?php
-              $code = $_SERVER['REDIRECT_STATUS'];
-              if (empty($code)) {
-                  echo "Error 404.";
-                } else {
-                  echo "Client Error: Error " . $code . ".";
-                }
-              ?>
-              <br>
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
+              <hr>
               </div>
               <!-- Footer starts here -->
           </div>
-            <hr>
         </body>
         <footer class="page-footer footer">
             <div class="container text-center">
