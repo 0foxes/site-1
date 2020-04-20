@@ -39,12 +39,17 @@
         <hr>
         <!-- Header ends here -->
         <body>
-            <div class="text">
-              <p>Error 50X: Server Error</p>
+          <div class="text">
+
+              <?php
+              $code = $_SERVER['REDIRECT_STATUS'];
+              echo "Server Error: Error " . $code
+              ?>
+
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
               </div>
-                <!-- Footer starts here -->
-            </div>
+              <!-- Footer starts here -->
+          </div>
             <hr>
         </body>
         <footer class="page-footer footer">

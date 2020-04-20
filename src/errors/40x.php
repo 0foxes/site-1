@@ -40,7 +40,12 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
-                <p>Error 40X: Client Error</p>
+
+                <?php
+                $code = $_SERVER['REDIRECT_STATUS'];
+                echo "Client Error: Error " . $code
+                ?>
+
                 <p>Use the <a href="/contact/">contact me</a> page for support.</p>
                 </div>
                 <!-- Footer starts here -->
