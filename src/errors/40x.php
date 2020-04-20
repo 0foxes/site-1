@@ -44,12 +44,12 @@
               <?php
               $code = $_SERVER['REDIRECT_STATUS'];
               if (empty($code)) {
-                  echo "Error 404";
+                  echo "Error 404.";
                 } else {
-                  echo "Client Error: Error " . $code;
+                  echo "Client Error: Error " . $code . ".";
                 }
               ?>
-
+              <br>
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
               </div>
               <!-- Footer starts here -->
