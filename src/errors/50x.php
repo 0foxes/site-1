@@ -44,7 +44,7 @@
               <?php
               $code = $_SERVER['REDIRECT_STATUS'];
               if (empty($code)) {
-                header("Location: https://www..com/error-placeholder");
+                header("Location: https://www..com/errors/40x.php");
               } else {
                 echo "Server Error: Error " . $code;
               }
