@@ -41,10 +41,14 @@
         <body>
           <div class="text">
 
-              <?php
-              $code = $_SERVER['REDIRECT_STATUS'];
-              echo "Client Error: Error " . $code
-              ?>
+            <?php
+            $code = $_SERVER['REDIRECT_STATUS'];
+            if (empty($code)) {
+                echo "Client Error";
+            } else {
+              echo "Client Error: Error " . $code;
+            }
+            ?>
 
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
               </div>

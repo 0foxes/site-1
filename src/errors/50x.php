@@ -43,7 +43,11 @@
 
               <?php
               $code = $_SERVER['REDIRECT_STATUS'];
-              echo "Server Error: Error " . $code
+              if (empty($code)) {
+                  echo "Server Error";
+              } else {
+                echo "Server Error: Error " . $code;
+              }
               ?>
 
               <p>Use the <a href="/contact/">contact me</a> page for support.</p>
