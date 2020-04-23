@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,7 +40,8 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
-              <p>Please note messages sent through this form are unencrypted, so <a href="/contact/pgp/">PGP</a> is encouraged.</p>
+              <p>Please note messages sent through this form are unencrypted, so <a href="/contact/pgp/">PGP</a> is highly encouraged.</p>
+              <p>If you prefer not to use this automated form, you can email me at <a href="mailto:@gmail.com">@gmail.com</a>.</p>
                 <div class="form">
                     <form method="POST" action="sendmail.php">
                         <div><label>Your Name:</label></div>
@@ -54,11 +56,13 @@
                         <div><label>Message:</label></div>
                         <div><textarea cols="40" rows="6" name="myMessage" class="form-control" required></textarea></div>
                         <br>
+                        <div class="g-recaptcha float-left" data-sitekey="6Lfybe0UAAAAAFhcrC4q0moYg5o8lEvVgoC36wJ6"></div>
                         <div class="float-right mt-2">
                             <input type="submit" value="Send" class="btn btn-primary"/>
                         </div>
                     </form>
-                    <p>If you prefer not to use this automated form, you can email me at <a href="mailto:@gmail.com">@gmail.com</a>.</p>
+                    <br>
+                    <br>
                     <br>
                 </div>
                 <!-- Footer starts here -->
