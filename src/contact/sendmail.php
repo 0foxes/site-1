@@ -43,8 +43,6 @@
             ini_set('display_startup_errors', 1);
             error_reporting(E_ALL);
 
-            echo "Message sent on " . date("d/m/Y");
-
             function getUserIP(){
               $clientIp  = @$_SERVER['HTTP_CLIENT_IP'];
               $forwardIp = @$_SERVER['HTTP_X_FORWARDED_FOR'];
@@ -66,7 +64,7 @@
               return $ip;
             }
 
-
+            // Email, self explanatory
             $userIp = getUserIP();
             $userTime = time();
             $userName 		= filter_var($_POST['myName'], FILTER_SANITIZE_STRING);
@@ -85,7 +83,26 @@
             $body .= "\r\nUser Email: " . $userEmail;
             $body .= "\r\nUser Message: " . $userMessage;
 
-            mail($to, $subject, $body, $headers);
+            // Captcha magic
+            if(isset($_POST['g-recaptcha-response'])){
+              $captcha=$_POST['g-recaptcha-response'];
+            }
+
+            if(!$captcha){
+              echo "Please complete the reCAPTCHA.";
+              exit;
+            }
+
+            $secretKey = "6Lfybe0UAAAAAIwO0K3IUxE9QcjbVePBor66Ut2A";
+            $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+            $response = file_get_contents($url);
+            $responseKeys = json_decode($response, true);
+            if($responseKeys["success"]) {
+              mail($to, $subject, $body, $headers);
+              echo "Message sent on " . date("d/m/Y") . ".";
+            } else {
+              echo "reCAPTCHA Invalid.";
+            }
             ?>
         <hr>
         </body>
