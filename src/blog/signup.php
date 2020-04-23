@@ -83,28 +83,46 @@
                     $userIp = getUserIP();
                     $userTime = time();
 
-                    // Do the database stuff
-                    $query = "INSERT IGNORE INTO $table(name, email, ip, signuptime)". "VALUES ('$name', '$email', '$userIp', '$userTime')";
+                    // Captcha magic
+                    if(isset($_POST['g-recaptcha-response'])){
+                      $captcha=$_POST['g-recaptcha-response'];
+                    }
 
-                    mysqli_query ($dbc, $query)
-                    or die ("Database query error.");
-                    echo 'You have been successfully signed up.' . '<br>';
-                    echo '<br>';
-                    echo 'To unsubscribe, email <a href="mailto:@gmail.com">@gmail.com</a>.';
-                    mysqli_close($dbc);
+                    if(!$captcha){
+                      echo "Please complete the reCAPTCHA.";
+                      exit;
+                    }
 
-                    // Notify me by email
-                    $sender = 'message@.com';
-                    $to 	 = "@gmail.com";
-                    $headers = 'From:' . $sender;
-                    $subject    = 'New User Signed Up:';
-                    $body 			= "New User Signed Up:";
-                    $body .= "\r\nUser IP: " . $userIp;
-                    $body .= "\r\nSignup Time: " . $userTime;
-                    $body .= "\r\nUser Name: " . $name;
-                    $body .= "\r\nUser Email: " . $email;
-                    mail($to, $subject, $body, $headers);
+                    $secretKey = "6Lfybe0UAAAAAIwO0K3IUxE9QcjbVePBor66Ut2A";
+                    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+                    $response = file_get_contents($url);
+                    $responseKeys = json_decode($response, true);
 
+                    if($responseKeys["success"]) {
+                      // DB stuff
+                      $query = "INSERT IGNORE INTO $table(name, email, ip, signuptime)". "VALUES ('$name', '$email', '$userIp', '$userTime')";
+
+                      mysqli_query ($dbc, $query)
+                      or die ("Database query error.");
+                      echo 'You have been successfully signed up.' . '<br>';
+                      echo '<br>';
+                      echo 'To unsubscribe, email <a href="mailto:@gmail.com">@gmail.com</a>.';
+                      mysqli_close($dbc);
+
+                      // Notify me by email
+                      $sender = 'message@.com';
+                      $to 	 = "@gmail.com";
+                      $headers = 'From:' . $sender;
+                      $subject    = 'New User Signed Up:';
+                      $body 			= "New User Signed Up:";
+                      $body .= "\r\nUser IP: " . $userIp;
+                      $body .= "\r\nSignup Time: " . $userTime;
+                      $body .= "\r\nUser Name: " . $name;
+                      $body .= "\r\nUser Email: " . $email;
+                      mail($to, $subject, $body, $headers);
+                    } else {
+                      echo "reCAPTCHA Invalid.";
+                    }      
                     ?>
             </div>
             <hr>
