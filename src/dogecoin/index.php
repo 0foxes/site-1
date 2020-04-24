@@ -40,7 +40,27 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
-                <p>Work in progress.</p>
+                <!-- This is where the fun begins -->
+                <?php
+                  // Initial setup
+                  require '../vendor/autoload.php';
+                  use ftab\Dogecoin\Client as DogecoinClient;
+                  $dogecoind = new DogecoinClient([
+                    'scheme'        => 'http',
+                    'host'          => 'localhost',
+                    'port'          => 44555,
+                    'user'          => 'cg',
+                    'password'      => 'a6702db208dcf42de40d8d198192f887b6e20fa785c1a5ce8796a5cdbd4fd594',
+                    'ca'            => '/etc/ssl/certs/_com.ca-bundle', // Fix this later
+                  ]);
+
+                  // Do stuff
+                  $info = $dogecoind->getblockchaininfo();
+                  echo "<pre>" . json_encode($info,JSON_PRETTY_PRINT) . "</pre>";
+                ?>
+                <!-- This is where the fun ends -->
+                <br>
+                <small>Work in progress.</small>
                 <!-- Footer starts here -->
             </div>
             <hr>
