@@ -1,5 +1,8 @@
 {
-    "require": {
-        "ftab/php-dogecoinrpc": "^3.0"
+  "require": {
+    	"ftab/php-dogecoinrpc": "^3.0",
+    },
+    "config": {
+    	"optimize-autoloader": true
     }
 }
