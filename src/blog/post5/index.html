@@ -45,7 +45,69 @@
             <div class="text">
                 <h5>24/04/2020</h5>
                 <br>
-                <p>Placeholder text.</p>
+                <p>Nowadays, everyone should have an internet presence. While some people and businesses settle for some social media pages, it’s better to have your own website. Your own website helps potential employers find you, showcases your skills to them (especially if you’re in the tech industry), and offers a place for you to share your thoughts with the world. So how can you build your own website? </p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/own-website.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">Your own website allows you to advertise yourself to the world, as this excellent example shows / .com</figcaption>
+                    </figure>
+                </div>
+                <p>While the numerous website builder services out there may look tempting (think Wix, Canva, or Wordpress), learning to build your own website from scratch is often more effective and rewarding. It’s truly your own personal website, you learn some coding while doing it, and it’s more customizable because you’re not picking from an array of pre-designed themes. This two-part guide helps you build your own website from scratch, even if you have zero technical knowledge. Part one (this) helps you get your website up and running, and part two helps you improve it.</p>
+                <p>Current students can sign up for the <a href="https://education.github.com/pack">Github student pack</a>, which lets you build your website for <strong>completely free</strong>. This guide assumes you have the Github student pack. If you don’t all the steps would still be the same, you’d just have to pay for it. To start, let’s familiarize ourselves with what any website needs. There are three main components: a domain, hosting, and content.</p>
+                <p><strong>Domains:</strong> Just as your house has an address, your website needs an address on the internet. The address is called a domain. For example, my own website’s domain would be <a href="https://www..com/">.com</a>. Your domain name should ideally represent who you are or what you do, and you “register” a domain for increments of a year from domain registrars to use it. Domain registrars include NameCheap, Google Domains, and GoDaddy.</p>
+                <p><strong>Hosting:</strong> Hosting is the server your website “lives” on 24/7 so everyone can access it. I recommend buying from DigitalOcean as you can get a lot of free credit there regardless of if you’re a student or not. If you’re a student you can get $50 that doesn’t expire (with the Github student pack, of course), and if you’re not you can still get $100 that expires in 3 months with <a href="https://m.do.co/c/2b4d2d5bf193">my referral link</a>. For reference, each month of hosting costs around $5.</p>
+                <p><strong>Content:</strong> The content is what actually appears on the website. There are a lot of different programming languages that can make up a website, but you only need to know two of them: HTML and CSS. HTML controls the main content of your website (like the text, images, and links), and CSS controls the style, which is how they look (like the font size and colour).</p>
+                <p>Now that we know what a website needs, let’s build our own!</p>
+                <hr>
+                <p>First, let’s get some hosting. Either use the Github student pack (recommended) to sign up for DigitalOcean or <a href="https://m.do.co/c/2b4d2d5bf193">my referral link</a> mentioned previously. Once we’re in, click the “Create Project” project button and call it whatever you want. After that, click “Get Started with a Droplet” to create your server. Recommended settings are as follows:</p>
+                <pre>
+Choose an image --> Distributions: Ubuntu 18.04.3 (LTS) x64
+Choose a plan --> Standard: $5/mo
+Add block storage: None
+Choose a datacenter region: The one closest to your geographical location
+Select additional options: None
+Authentication: One-time password
+                </pre>
+                <p>After it finishes creating the droplet, it’ll take you to a screen like this.</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/dashboard.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">In this example, your server name is ubuntu-s-1vcpu-tor1-01 / .com</figcaption>
+                    </figure>
+                </div>
+                <p>Click on your droplet name. After that, click “Console” to access your server. The username is “root”, and the password would have been emailed to you. Type the following commands:</p>
+                <pre>
+“sudo passwd root” (to change your own password)
+“sudo apt update” (to update the included software)
+“sudo apt upgrade” (also to update the included software)
+“sudo apt install apache2” (to install server software)
+“curl -4 icanhazip.com” (to get your IP)
+                </pre>
+                <p>Note down your IP and type it in your browser’s address bar. You should be greeted with this page:</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/apache.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">This default page tells you your server is configured properly, and people can visit it from the internet / DigitalOcean</figcaption>
+                    </figure>
+                </div>
+                <p>We now have hosting, but we need to connect it to a domain. If you have the Github student pack, go <a href="https://education.github.com/benefits">here</a> and get your unique link for NameCheap. These instructions are specifically for NameCheap, but other domain registrars should have a very similar process. After you’ve registered a domain and paid, check your email to verify it. Then, go to your Dashboard and click “manage” next to your website name. Select “NameCheap Basic DNS” for your Nameservers.</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/namecheap.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">Request your unique link from Github to get your free domain / Github</figcaption>
+                    </figure>
+                </div>
+                <p>Then follow <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9256/29/how-to-edit-dns-zone-in-cpanel">these instructions</a> to add a type "A" Record with your domain name and your DigitalOcean IP address. Apologies for linking an external guide, but I use an alternative DNS setup. Then, wait 5-10 minutes for your changes to take effect. When you go to your domain name now in your browser, you should see the Apache default page. Let’s switch that with something else.</p>
+                <p>You need to install <a href="https://winscp.net/eng/download.php">WinSCP</a> to update the files on your website. After it’s installed, click “New Site” and use the following settings:</p>
+                <div class="text-center">
+                    <figure class="figure">
+                        <img src="/assets/images/win-scp.webp" class="figure-img img-fluid rounded" alt="Network error, couldn't load image.">
+                        <figcaption class="figure-caption">WinSCP allows you to transfer files between your remote server and your computer WinSCP</figcaption>
+                    </figure>
+                </div>
+                <p>Click “login”, and you should be able to see two windows of files. The files on the left are on your computer, and the files on the right are on the server. Go to /var/www/html/ on your server, and delete everything in that (that’s the default page). Finally, upload a file named “index.html” (you can learn HTML <a href="https://www.w3schools.com/html/">here</a>, but plain text works as well. You now have your own website!</p>
+                <p>This was a relatively basic guide intended for people with little to no programming experience to make your own website, and I hope it worked well for you. Feel free to <a href="https://.com/contact/">contact me</a> to tell me about the website you made, offer feedback about this guide, or if you need help. Part 2 of this guide will be dedicated to how you can improve your own website, and can be accessed at this link:</p>
+                <p>[Part 2 will be linked here when published]</p>
                 <!-- Footer starts here -->
             </div>
             <br>
