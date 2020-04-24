@@ -1,0 +1,36 @@
+{
+    "name": "ftab/php-dogecoinrpc",
+    "type": "library",
+    "description": "Dogecoin JSON-RPC client based on php-bitcoinrpc",
+    "keywords": ["dogecoin","api","jsonrpc","guzzle"],
+    "homepage": "https://github.com/ftab/php-dogecoinrpc",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dennis Field",
+            "email": "fury@xibase.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1",
+        "ext-bcmath": "*",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0 | ^8.0"
+    },
+    "autoload": {
+        "psr-4" : {
+            "ftab\\Dogecoin\\": "src"
+        },
+        "files" : [
+            "src/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4" : {
+            "ftab\\Dogecoin\\Tests\\": "tests"
+        }
+    }
+}
