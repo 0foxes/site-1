@@ -1,0 +1,5 @@
+{
+    "require": {
+        "ftab/php-dogecoinrpc": "^3.0"
+    }
+}
