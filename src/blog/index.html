@@ -40,7 +40,7 @@
         <!-- Header ends here -->
         <body>
             <div class="text">
-              <p>This is my blag, where I talk about technology, coding, science, and occasionally something else. No, I didn't misspell<a href="https://blog.xkcd.com/"> blag</a>.</p>
+                <p>This is my blag, where I talk about technology, coding, science, and occasionally something else. No, I didn't misspell<a href="https://blog.xkcd.com/"> blag</a>.</p>
                 <p>All of my blog posts, from most recent to oldest:</p>
                 <div class="row">
                     <div class="col-sm-3">
@@ -90,68 +90,57 @@
                 </div>
                 <br>
                 <div class="row">
-                  <div class="col-sm-3">
-                      <div class="card">
-                          <img class="card-img-top" src="/assets/images/coronavirus.webp" alt="Network error, couldn't load image.">
-                          <div class="card-body">
-                              <h4 class="card-title">Fighting COVID-19</h4>
-                              <p class="card-text">How you can help scientists and fight COVID-19 at home with your computer.</p>
-                              <p>24/03/2020</p>
-                              <a href="/blog/post1/" class="btn btn-primary">Read More</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-sm-3">
-                      <div class="card">
-                          <img class="card-img-top" src="/assets/images/earthrise.webp" alt="Network error, couldn't load image.">
-                          <div class="card-body">
-                              <h4 class="card-title">My New Website</h4>
-                              <p class="card-text">Testing out my self-built blog system (without Wordpress), especially my setup and design.</p>
-                              <p>21/03/2020</p>
-                              <a href="/blog/post0/" class="btn btn-primary">Read More</a>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <hr>
-                <div id="accordion">
-                    <div class="card">
-                        <div class="card-header" id="signup">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" data-toggle="collapse" data-target="#collapse" aria-expanded="true" aria-controls="collapse11">
-                                Sign up to be notified of new posts
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapse" class="collapse" aria-labelledby="signup" data-parent="#accordion">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-top" src="/assets/images/coronavirus.webp" alt="Network error, couldn't load image.">
                             <div class="card-body">
-                                <div class="row">
-                                    <!-- form goes here -->
-                                    <div class="col-sm-12">
-                                        <div class="form">
-                                            <form method="POST" action="signup.php">
-                                                <div><label>Your Name:</label></div>
-                                                <div><input type="text" name="userName" class="form-control" required/></div>
-                                                <br>
-                                                <div><label>Your Email:</label></div>
-                                                <div><input type="text" name="userEmail" class="form-control" required/></div>
-                                                <br>
-                                                <div class="g-recaptcha float-left" data-sitekey="6Lfybe0UAAAAAFhcrC4q0moYg5o8lEvVgoC36wJ6"></div>
-                                                <div class="float-right">
-                                                    <input class="btn btn-primary" type="submit" value="Sign Up!" />
-                                                </div>
-                                                <div class="float-right mx-2">
-                                                    <a href="/about/privacy/" class="btn btn-primary">Privacy Policy</a>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h4 class="card-title">Fighting COVID-19</h4>
+                                <p class="card-text">How you can help scientists and fight COVID-19 at home with your computer.</p>
+                                <p>24/03/2020</p>
+                                <a href="/blog/post1/" class="btn btn-primary">Read More</a>
                             </div>
                         </div>
                     </div>
-                    <hr>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <img class="card-img-top" src="/assets/images/earthrise.webp" alt="Network error, couldn't load image.">
+                            <div class="card-body">
+                                <h4 class="card-title">My New Website</h4>
+                                <p class="card-text">Testing out my self-built blog system (without Wordpress), especially my setup and design.</p>
+                                <p>21/03/2020</p>
+                                <a href="/blog/post0/" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <hr>
+                <button class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target="#signup" aria-expanded="false" aria-controls="signup">
+                Sign Up For Email Notifications
+                </button>
+                <div class="col-sm-12 collapse" id="signup">
+                    <br>
+                    <div class="form">
+                        <form method="POST" action="signup.php">
+                            <div><label>Your Name:</label></div>
+                            <div><input type="text" name="userName" class="form-control" required/></div>
+                            <br>
+                            <div><label>Your Email:</label></div>
+                            <div><input type="text" name="userEmail" class="form-control" required/></div>
+                            <br>
+                            <div class="g-recaptcha float-left" data-sitekey="6Lfybe0UAAAAAFhcrC4q0moYg5o8lEvVgoC36wJ6"></div>
+                            <div class="float-right">
+                                <input class="btn btn-primary" type="submit" value="Sign Up!" />
+                            </div>
+                            <div class="float-right mx-2">
+                                <a href="/about/privacy/" class="btn btn-primary">Privacy Policy</a>
+                            </div>
+                        </form>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <hr>
             </div>
             <!-- Footer starts here -->
     </div>
