@@ -9,11 +9,11 @@ html, body {
 }
 /* Background image */
 .bgimg {
-  background-image: url('/assets/images/ship.webp');
+  background-image: url('/assets/images/earthrise-big.webp');
   height: 100vh!important;
-  background-position: center!important;
-  background-size: cover!important;
-  background-repeat: no-repeat!important;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
 }
 /* Normal text */
