@@ -7,7 +7,6 @@ Tech Used List:
 - Apache
 - MySQL
 - PHP
-
 - HTML
 - CSS
 - JS
@@ -17,3 +16,9 @@ Tech Used List:
 - Cloudflare
 - Github
 - Bootstrap 4.0
+
+
+- FAHClient
+- Dogecoind
+- Apache
+- php-dogecoinrpc
