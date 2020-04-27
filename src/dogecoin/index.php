@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" crossorigin="anonymous">
         <link rel='icon' href="https://picsum.photos/256?random=1" type='image/x-icon' />
-        <title>Dogecoin Node</title>
+        <title>estnet Dogecoin Node</title>
         <!-- Mobile-friendly navbar -->
         <nav class="navbar navbar-expand-lg navbar-expand-xl navbar-expand-md navbar-dark bg-dark shadow-sm sticky-top">
             <div class="navbar-header">
@@ -34,7 +34,7 @@
     </head>
     <div class="container">
         <div class="page-header" style="padding-top:1em; margin:auto;">
-            <h1>Dogecoin Node (testnet)</h1>
+            <h1>Testnet Dogecoin Node</h1>
         </div>
         <hr>
         <!-- Header ends here -->
@@ -60,7 +60,6 @@
                 ?>
                 <!-- This is where the fun ends -->
                 <br>
-                <small>Work in progress.</small>
                 <!-- Footer starts here -->
             </div>
             <hr>
