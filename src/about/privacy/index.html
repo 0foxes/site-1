@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap" integrity="sha384-PHCoZ/bRWiIovGAuKPKZFL/l1eRlN1W/Pr2Ie07om/E6uzfGdy8CZ4HP82Rc2aH0" crossorigin="anonymous">
         <link rel='icon' href="https://picsum.photos/256?random=1" type='image/x-icon' />
         <title>About Me</title>
         <!-- Mobile-friendly navbar -->
