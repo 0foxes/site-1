@@ -9,67 +9,82 @@
 
 <url>
   <loc>https://.com/</loc>
-  <lastmod>2020-04-14T20:30:01+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://.com/about/</loc>
-  <lastmod>2020-03-24T12:48:09+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://.com/resume/</loc>
-  <lastmod>2020-04-16T18:14:23+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://.com/projects/</loc>
-  <lastmod>2020-04-17T14:20:36+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://.com/blog/</loc>
-  <lastmod>2020-04-17T03:08:53+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://.com/contact/</loc>
-  <lastmod>2020-03-24T12:48:09+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://.com/contact/discord/</loc>
+  <lastmod>2020-04-27T02:49:09+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://.com/contact/pgp/</loc>
-  <lastmod>2020-03-24T12:34:59+00:00</lastmod>
+  <lastmod>2020-04-27T02:49:06+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
+  <loc>https://.com/dogecoin/</loc>
+  <lastmod>2020-04-27T18:05:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://.com/blog/post5/</loc>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
   <loc>https://.com/blog/post4/</loc>
-  <lastmod>2020-04-17T03:09:18+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://.com/blog/post3/</loc>
-  <lastmod>2020-04-12T23:56:04+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://.com/blog/post2/</loc>
-  <lastmod>2020-04-12T23:55:46+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://.com/blog/post1/</loc>
-  <lastmod>2020-04-13T00:00:09+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://.com/blog/post0/</loc>
-  <lastmod>2020-04-12T23:57:56+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://.com/about/privacy/</loc>
-  <lastmod>2020-03-24T12:48:09+00:00</lastmod>
+  <lastmod>2020-04-27T18:03:26+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
