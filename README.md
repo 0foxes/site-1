@@ -10,15 +10,13 @@ Tech Used List:
 - HTML
 - CSS
 - JS
-
-
+---
 - NameCheap
 - DigitalOcean
 - Cloudflare
 - Github
 - Bootstrap 4.0
-
-
+---
 - FAHClient
 - Dogecoind
 - Apache
