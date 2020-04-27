@@ -8,10 +8,10 @@ $headers = 'From:' . $sender;
 
 if (mail($recipient, $subject, $message, $headers))
 {
-    echo "Message accepted";
+    echo "Message delivered";
 }
 else
 {
-    echo "Error: Message not accepted";
+    echo "Error: Message not delivered";
 }
 ?>
