@@ -45,7 +45,32 @@
             <div class="text">
                 <h5>23/05/2020</h5>
                 <br>
-                <p>Placeholder text</p>
+                <p>Recently, I switched operating systems from Windows to Linux, specifically from Windows 10 to Ubuntu. Although the process was relatively easy, there were very few places I could get help if something wasn’t working, and I had to do some additional research to get my computer to work properly. I will be writing about my experience with Linux so far in this post, as well as problems I encountered and how others with a similar hardware configuration can resolve them.</p>
+                <p>I had played with Linux for a long time, first with <a href="https://www.virtualbox.org/">VirtualBox</a> and then with dual-booting my system. However, the operating system I use regularly has always been Windows—until now. Why did I switch? A Windows update broke my computer (again), so I researched which of my commonly-used software was on Linux. To my surprise, all of them were!</p>
+                <p>I installed Linux on my laptop with the following hardware. To my disappointment, it had come with a Realtek network card that was poorly supported on Linux. Additionally, I was uncertain how the AMD iGPU would be supported:</p>
+                <pre>
+Lenovo E495
+AMD Ryzen 5 3500U
+Vega 8 Graphics
+2x4GB DDR4-2666 RAM
+Realtek 8822BE Network Card
+256GB NVME SSD
+500GB HDD
+1080p IPS Display
+                </pre>
+                <p>On doing some further research, I realized that there were more reasons to use Linux over other operating systems because it’s typically faster, uses fewer resources (less than half the RAM and CPU of Windows on my computer), less bloated with pre-installed software, you learn a lot while using it (practically all enterprise servers use Linux), there are more ways to customise it, and it’s open-source software if you care about that. I picked Ubuntu because of its excellent driver support, and the LTS (Long Term Stability) release is stable and supported for a long time. It’s also one of the more popular Linux distros (versions), so if I ran into a problem it would be easy to find a solution.</p>
+                <p>To install it, I used <a href="https://rufus.ie/">Rufus</a>
+                 to turn a USB into installation media. I could install Linux onto my computer with it or run it directly off the USB (as running it off the computer is faster, I chose to install it). Everything went smoothly during the installation, but that may be because Ubuntu’s installer is one of the easiest to use. The installer correctly detected I already had Windows on my computer, so Ubuntu was installed alongside Windows and I could choose the OS every time the computer started. Most of the drivers were auto-detected and installed correctly, but there were a few problems here and there. AMD had a reputation for not being supported well on Linux (relative to Nvidia and Intel), so that was a pleasant surprise.</p>
+                <p>There were a few problems here and there, which I have listed below as well as how I resolved them. If more problems crop up for me, I will update this with their fixes.</p>
+                <hr>
+                <p>LED mute indicator didn't work - Running "alsactl restore" and rebooting</p>
+                <p>Chrome sometimes had black boxes - Installing mesa with "sudo install mesa"</p>
+                <p>Windows couldn't read Linux files - Separate NTFS drive for files both OSs could read</p>
+                <p>Couldn't set charging threshold - Using <a href="https://linrunner.de/tlp/">thinkpad-tlp</a></p>
+                <hr>
+                <p>As for software, most software I typically used was available on Ubuntu either through the built-in software store or elsewhere on the internet. As for the ones that weren’t available, there was always a Linux-friendly alternative to be found. In some cases, they were even better than the original! If I really needed to run a Windows program, I could either switch to Windows or use WINE, which lets Linux users run Windows programs on Linux.</p>
+                <p>After I got everything up and running, I excitedly began customising my desktop. I could extend the GNOME desktop with “GNOME extensions”, and I used a <a href="https://github.com/jarcode-foss/glava">music visualiser</a> as my desktop background. Finally I installed <a href="https://github.com/brndnmtthws/conky">conky</a> for some real-time system information. Windows or MacOS users would be hard-pressed to replicate this, as those operating systems simply aren’t customisable to this degree.</p>
+                <p>After a week of using Linux, I’ve noticed that I spend less time fighting with the operating system and more time getting work done. However, I’ve had to relearn most of what I do on Windows, as they are different operating systems, after all. I’d strongly recommend Linux to the reader if you’re willing to tinker a little here and there, but if your computer is fast and it works there’s you shouldn't switch unless you want to spend time to learn more about your computer.</p>
                 <!-- Footer starts here -->
             </div>
             <br>
