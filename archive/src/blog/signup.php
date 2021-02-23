@@ -70,7 +70,7 @@
 
                     // Connection to database
                     $user = "cg";
-                    $password = "A334757465z.";
+                    $password = "milkychocolate64";
                     $host = "127.0.0.1";
                     $dbase = "main";
                     $table = "emails";
@@ -122,7 +122,7 @@
                       mail($to, $subject, $body, $headers);
                     } else {
                       echo "reCAPTCHA Invalid.";
-                    }      
+                    }
                     ?>
             </div>
             <hr>
